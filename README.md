@@ -30,11 +30,10 @@ Copies the individual extension config files to this directory
 # Edit the individual extensions configuration files .yaml
 Modify the following sections of .yaml files
 accounts:
-    awsAccessKey: "ACCESSS-KEY"
-    awsSecretKey: "SECRET-KEY""
-    displayAccountName: "APPD-AWS"
-
-  metricPrefix: "Custom Metrics|EXTENSION-NAME|"
+>awsAccessKey: "ACCESSS-KEY"
+>awsSecretKey: "SECRET-KEY""
+>displayAccountName: "APPD-AWS"
+metricPrefix: "Custom Metrics|EXTENSION-NAME|"
 
 # Configure the Extensions
 Copies the modifed configuration files back to each extension install dir
