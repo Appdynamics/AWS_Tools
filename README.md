@@ -2,11 +2,11 @@
 
 Facilitates the deployment of AppDynamics AWS Monitoring Extensions:
 
-  AWSLambdaMonitor
-  AWSSNSMonitor
-  AWSSQSMonitor
-  AWSS3Monitor
-  AWSELBMonitor
+  - AWSLambdaMonitor
+  - AWSSNSMonitor
+  - AWSSQSMonitor
+  - AWSS3Monitor
+  - AWSELBMonitor
 
 Additional extensions can added, or extensions removed if not needed.
 
@@ -24,20 +24,20 @@ Configure the environment variable TARGET_MACHINE_AGENT_DIR in the script extens
 ./extension-ctl.sh installed
 
 # Prepare the Extensions configuration
-# Copies the individual extension config files to this directory
+Copies the individual extension config files to this directory
 ./extension-ctl.sh prepare
 
 # Edit the individual extensions configuration files .yaml
-# Modify the following:
-#accounts:
-#  - awsAccessKey: "<---access-key--->"
-#    awsSecretKey: "<---secret-key--->""
-#    displayAccountName: "APPD-AWS"
-#
-# metricPrefix: "Custom Metrics|<extension-name>|"
+Modify the following sections of .yaml files
+accounts:
+    awsAccessKey: "ACCESSS-KEY"
+    awsSecretKey: "SECRET-KEY""
+    displayAccountName: "APPD-AWS"
+
+  metricPrefix: "Custom Metrics|EXTENSION-NAME|"
 
 # Configure the Extensions
-# Copies the modifed configuration files back to each extension install dir
+Copies the modifed configuration files back to each extension install dir
 ./extension-ctl.sh config
 
 # Validate Extensions configurations
@@ -47,4 +47,4 @@ Configure the environment variable TARGET_MACHINE_AGENT_DIR in the script extens
 ./extension-ctl.sh start
 
 # Review the Machine Agent logs
-# tail -f logs/machine-agent.log
+tail -f logs/machine-agent.log
