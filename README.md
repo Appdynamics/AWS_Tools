@@ -8,7 +8,7 @@ Facilitates the deployment of AppDynamics AWS Monitoring Extensions:
   - AWSS3Monitor
   - AWSELBMonitor
 
-Additional extensions can added, or extensions removed if not needed.
+Additional extensions can added, or extensions removed as needed.
 
 Use the command as follows:
 
@@ -25,6 +25,7 @@ Configure the environment variable TARGET_MACHINE_AGENT_DIR in the script extens
 
 # Prepare the Extensions configuration
 Copies the individual extension config files to this directory
+
 ./extension-ctl.sh prepare
 
 # Edit the individual extensions configuration files .yaml
@@ -37,6 +38,7 @@ Modify the following sections of .yaml files
 
 # Configure the Extensions
 Copies the modifed configuration files back to each extension install dir
+
 ./extension-ctl.sh config
 
 # Validate Extensions configurations
