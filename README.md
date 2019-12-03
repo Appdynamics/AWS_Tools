@@ -18,7 +18,7 @@ Configure the environment variable TARGET_MACHINE_AGENT_DIR in the script extens
 ./extension-ctl.sh check
 
 # Download all of the Extensions
-./extension-ctl.sh downloaded
+./extension-ctl.sh download
 
 # Install the Extensions
 ./extension-ctl.sh install
