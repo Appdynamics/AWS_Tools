@@ -29,7 +29,7 @@ Copies the individual extension config files to this directory
 ./extension-ctl.sh prepare
 
 # Edit the individual extensions configuration files .yaml
-Modify the following sections of .yaml files
+Modify the following sections of the .yaml files
 * accounts:
   + awsAccessKey: "ACCESSS-KEY"
   + awsSecretKey: "SECRET-KEY""
