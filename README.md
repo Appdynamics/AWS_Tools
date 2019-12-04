@@ -12,6 +12,11 @@ Additional extensions can added, or extensions removed as needed.
 
 Use the command as follows:
 
+# Clone this repository
+git clone https://github.com/APPDRYDER/AWS_Tools.git
+
+cd AWS_Tools
+
 Configure the environment variable TARGET_MACHINE_AGENT_DIR in the script extension-ctl.sh to point to the installed Machine Agent directory
 
 # Validate the extensions to be downloaded and installed
