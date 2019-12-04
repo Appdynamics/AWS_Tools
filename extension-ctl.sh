@@ -113,7 +113,7 @@ elif [ $cmd == "start" ]; then
   sleep 2
   rm -rf $TARGET_MACHINE_AGENT_DIR/logs/*
   rm -f nohup.out
-  rm $TARGET_MACHINE_AGENT_DIR/monitors/analytics-agent/analytics-agent.id
+  rm -f $TARGET_MACHINE_AGENT_DIR/monitors/analytics-agent/analytics-agent.id
   eval MAC_AGENT_PATH=`echo $TARGET_MACHINE_AGENT_DIR/bin/machine-agent`
   echo "Running $MAC_AGENT_PATH"
   nohup $MAC_AGENT_PATH -Dad.agent.name="analytics-"`hostname`  &
