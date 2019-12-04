@@ -112,8 +112,8 @@ elif [ $cmd == "start" ]; then
   pkill -f "machineagent.jar"
   sleep 2
   rm -rf $TARGET_MACHINE_AGENT_DIR/logs/*
-  rm -f nohup.out
   rm -f $TARGET_MACHINE_AGENT_DIR/monitors/analytics-agent/analytics-agent.id
+  rm -f nohup.out
   eval MAC_AGENT_PATH=`echo $TARGET_MACHINE_AGENT_DIR/bin/machine-agent`
   echo "Running $MAC_AGENT_PATH"
   nohup $MAC_AGENT_PATH -Dad.agent.name="analytics-"`hostname`  &
@@ -140,5 +140,14 @@ elif [ $cmd == "test1" ]; then
   echo "test1"
 
 else
-  echo "Unknown command: $cmd"
+  echo "Commands:"
+  echo "  check     - list extensions to download"
+  echo "  download  - download extensions"
+  echo "  install   - install the extensions in the machine agent monitors directory"
+  echo "  prepare   - copy extension config files to current directory"
+  echo "  config    - copy current directory extension config files back to monitors directory "
+  echo "  validate  - checksum extension config files"
+  echo "  start     - restart the machine agent"
+  echo "  stop      - stop the machine agent"
+  echo "  clean     - delete all extensions from machine agent monitors directory"
 fi
